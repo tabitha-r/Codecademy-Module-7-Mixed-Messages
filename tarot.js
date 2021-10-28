@@ -1,3 +1,4 @@
+/*
 // This is to be placeHolders for information that would be gathered through document.getElementById.
 let namePlaceholder = "John";
 const randomType = () => {
@@ -29,11 +30,11 @@ console.log(typePlaceholder);
 // Placeholders will need to be changed to elementById.
 let userName = namePlaceholder;
 let readingType = typePlaceholder;
+*/
 
-/*
 let userName = document.getElementById("user-name");
 let readingType = document.getElementsByName("reading-type");
-*/
+
 
 // This is the result variable.
 let result = '';
@@ -345,6 +346,7 @@ if (!userName) {
     }
 };
     console.log(result);
-    document.write('<p>' + result + '</p>');
+    let notif = document.getElementById("result");
+    notif.textContent = result;
     return result;
 };
