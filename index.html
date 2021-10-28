@@ -11,8 +11,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header>
-        <h1 class="site-title">Lady Lucille's <span class="small-head">Tarot Reading</span></h1>
-    </header>
+    <div class="background">
+        <header>
+            <h1 class="site-title">Lady Lucille's <span class="small-head">Tarot Reading</span></h1>
+        </header>
+        <div class="generator">
+            <h2>Find out your truth.</h2>
+            <form class="reading">
+                <label for="user-name">Your Name:</label><br>
+                <input type="text" id="user-name" name="user-name"><br>
+            </form>
+            <p>What kind of Tarot reading are you looking for?</p>
+            <form class="reading">
+                <label class="container" for="ppf">
+                    <input type="radio" id="ppf" name="reading-type" value="Past, Present, Future">
+                    Past, Present, Future
+                </label><br>
+                <label class="container" for="ppf">
+                    <input type="radio" id="daily" name="reading-type" value="Daily Intention">
+                    Daily Intention
+                </label><br>
+                <label class="container" for="ppf">
+                    <input type="radio" id="love" name="reading-type" value="Love">
+                    Love
+                </label><br>
+                <label class="container" for="ppf">
+                    <input type="radio" id="problem" name="reading-type" value="Problem Solving">
+                    Problem Solving
+                </label><br>
+                <label class="container" for="ppf">
+                    <input type="radio" id="guidance" name="reading-type" value="Guidance">
+                    Guidance
+                </label><br>
+                <input type="submit" id="submit-button" value="Tell me">
+            </form>
+        </div>
+        <div class="spacer"></div>
+        <footer>
+            <p class="copyright">Created by Tabitha Riley © 2021</p>
+        </footer>
+        <div class="spacer"></div>
+    </div>
 </body>
 </html>

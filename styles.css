@@ -5,12 +5,28 @@
 
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 :root {
     --palette-aqua: rgb(100, 194, 205);
     --palette-blue: rgb(48, 82, 160);
     --palette-pink: rgb(162, 95, 162);
     --palette-purple: rgb(57, 41, 113);
     --palette-yellow: rgb(223, 180, 69);
+}
+
+body {
+    background-image: linear-gradient(var(--palette-pink), var(--palette-purple));
+}
+
+.background {
+    background-image: url("https://www.pngplay.com/wp-content/uploads/8/Floating-Stars-PNG-Photos.png");
+    background-repeat: none;
+    background-size: cover;
 }
 
 header {
@@ -20,15 +36,128 @@ header {
 }
 
 .site-title {
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Cinzel Decorative', serif;
     font-weight: 700;
     font-size: 5rem;
     color: var(--palette-yellow);
     text-align: center;
-
+    filter: drop-shadow();
 }
 
 .small-head {
     font-size: 3rem;
     font-weight: 400;
+}
+
+h2 {
+    font-family: 'Amatic SC', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+}
+
+footer {
+    margin: auto;
+    width: 20%;
+    background-color: var(--palette-blue);
+    border-radius: 25px;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.generator {
+    margin: auto;
+    width: 25%;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 25%);
+    border-radius: 25px;
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+    align-content: center;
+    font-size: 1.9rem;
+    color: #fff;
+}
+
+.spacer {
+    margin: 60px;
+}
+
+.reading {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 20px;
+}
+
+input[type=submit] {
+    font-family: 'Cinzel Decorative', serif;
+    background-color:rgb(57, 41, 113);
+    border-radius: 20px;
+    padding: 20px;
+    color: #fff;
+    border: 0px;
+    margin: 20px;
+    font-size: 1.5rem;
+    letter-spacing: .2rem; 
+}
+
+input[type=submit]:hover {
+    background-color: var(--palette-aqua);
+    transition: background-color linear 0.75s;
+}
+
+input[type=text] {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0px;
+    text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 10px;
+    color: var(--palette-pink);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--palette-yellow);
+    background-color: CanvasText;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
 }
