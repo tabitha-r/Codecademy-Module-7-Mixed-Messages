@@ -18,35 +18,34 @@
         <div class="generator">
             <div class="response">
             <h2>Find out your truth.</h2>
-            <p id="answer"></p>
+            <p id="result"></p>
             </div>
-            <form class="reading">
+            <form id="reading">
                 <label for="user-name">Your Name:</label><br>
-                <input type="text" id="user-name" name="user-name"><br>
+                <input type="text" name="user-name"><br>
             <label class="type-instruct">What kind of Tarot reading are you looking for?
-            <form class="reading">
                 <label class="container" for="ppf">
-                    <input type="radio" id="ppf" name="reading-type" value="Past, Present, Future">
+                    <input type="radio" name="reading-type" value="ppf">
                     Past, Present, Future
                 </label><br>
                 <label class="container" for="daily">
-                    <input type="radio" id="daily" name="reading-type" value="Daily Intention">
+                    <input type="radio" name="reading-type" value="daily">
                     Daily Intention
                 </label><br>
                 <label class="container" for="love">
-                    <input type="radio" id="love" name="reading-type" value="Love">
+                    <input type="radio" name="reading-type" value="love">
                     Love
                 </label><br>
                 <label class="container" for="problem">
-                    <input type="radio" id="problem" name="reading-type" value="Problem Solving">
+                    <input type="radio" name="reading-type" value="problem">
                     Problem Solving
                 </label><br>
                 <label class="container" for="guidance">
-                    <input type="radio" id="guidance" name="reading-type" value="Guidance">
+                    <input type="radio" name="reading-type" value="guidance">
                     Guidance
                 </label><br>
             </label>
-                <input type="submit" id="submit-button" value="Tell me">
+                <input type="submit" id="submit-button" value="Tell me" onclick="conductReading();">
             </form>
         </div>
         <div class="spacer"></div>
@@ -55,5 +54,6 @@
         </footer>
         <div class="spacer"></div>
     </div>
+    <script src="tarot.js"></script>
 </body>
 </html>

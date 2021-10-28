@@ -25,9 +25,15 @@ let typePlaceholder = randomType();
 console.log(namePlaceholder);
 console.log(typePlaceholder);
 
+
 // Placeholders will need to be changed to elementById.
 let userName = namePlaceholder;
 let readingType = typePlaceholder;
+
+/*
+let userName = document.getElementById("user-name");
+let readingType = document.getElementsByName("reading-type");
+*/
 
 // This is the result variable.
 let result = '';
@@ -303,6 +309,7 @@ const guidanceReading = (card1, card2, card3, name) => {
 };
 
 // Identify if a name & type has been inputted.
+function conductReading() {
 if (!userName) {
     if (!readingType) {
         result = "Please enter your name select a reading type."
@@ -318,7 +325,6 @@ if (!userName) {
     let firstCard = defineCard(firstCardGen);
     let secondCard = defineCard(secondCardGen);
     let thirdCard = defineCard(thirdCardGen);
-    result = firstCard[0] + ' & ' + secondCard[0] + ' & ' + thirdCard[0];
 
     switch (readingType) {
         case 'ppf':
@@ -338,6 +344,7 @@ if (!userName) {
             break;
     }
 };
-
-console.log(result);
-return result;
+    console.log(result);
+    document.write('<p>' + result + '</p>');
+    return result;
+};
