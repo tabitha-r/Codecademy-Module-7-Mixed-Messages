@@ -1,6 +1,3 @@
-/*
-// This is to be placeHolders for information that would be gathered through document.getElementById.
-let namePlaceholder = "John";
 const randomType = () => {
     let type = Math.floor(Math.random() * 5);
     switch (type) {
@@ -21,23 +18,19 @@ const randomType = () => {
             break;
     };
 };
-let typePlaceholder = randomType();
 
-console.log(namePlaceholder);
-console.log(typePlaceholder);
+let userName = '';
+let readingType = '';
 
-
-// Placeholders will need to be changed to elementById.
-let userName = namePlaceholder;
-let readingType = typePlaceholder;
-*/
-
-let userName = document.getElementById("user-name");
-let readingType = document.getElementsByName("reading-type");
-
+// userName = document.getElementsByName("user-name");
+// readingType = document.getElementsByName("reading-type");
 
 // This is the result variable.
 let result = '';
+let notif = document.getElementById("result");
+const tarotForm = document.getElementById('reading');
+const formParent = document.getElementById('formParent');
+const instruction = document.getElementById('instruction');
 
 // Function to generate three numbers.
     let generateCard = (except1, except2) => {
@@ -313,13 +306,14 @@ const guidanceReading = (card1, card2, card3, name) => {
 function conductReading() {
 if (!userName) {
     if (!readingType) {
-        result = "Please enter your name select a reading type."
+        userName = "Friend";
+        readingType = randomType(); 
     } else {
-        result = "Please enter your name."
+        userName = "Friend";
     };
 } else if (!readingType) {
-        result = "Please select a reading type."
-} else {
+        readingType = randomType(); 
+};
     let firstCardGen = generateCard();
     let secondCardGen = generateCard(firstCardGen);
     let thirdCardGen = generateCard(firstCardGen, secondCardGen);
@@ -343,10 +337,11 @@ if (!userName) {
         case 'guidance':
             result = guidanceReading(firstCard, secondCard, thirdCard, userName);
             break;
-    }
+    };
+    instruction.innerHTML = '<p>The cards have spoken.</p>'
+    formParent.removeChild(tarotForm);
+    notif.innerHTML = '<p>' + result + '</p>';
 };
-    console.log(result);
-    let notif = document.getElementById("result");
-    notif.textContent = result;
-    return result;
-};
+
+const getReading = document.getElementById('submit-button');
+getReading.onclick = conductReading;

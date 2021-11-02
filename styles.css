@@ -174,8 +174,9 @@ input[type="radio"]:checked::before {
 
 .response {
     background-color: var(--palette-purple);
-    padding: 20px;
+    padding: 30px;
     border-radius: 20px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
     color: var(--palette-aqua);
 }
