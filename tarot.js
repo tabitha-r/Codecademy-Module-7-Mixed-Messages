@@ -19,11 +19,19 @@ const randomType = () => {
     };
 };
 
+const inputs = new URLSearchParams(window.location.search);
+
 let userName = '';
 let readingType = '';
 
-// userName = document.getElementsByName("user-name");
-// readingType = document.getElementsByName("reading-type");
+function cleanInput (str){
+    if(!str) return null
+    let temp = str.trim()
+    return temp[0].toUpperCase() + temp.substring(1)
+}
+
+userName = cleanInput(inputs.get('user-name'));
+readingType = inputs.get('reading-type');
 
 // This is the result variable.
 let result = '';
@@ -339,9 +347,7 @@ if (!userName) {
             break;
     };
     instruction.innerHTML = '<p>The cards have spoken.</p>'
-    formParent.removeChild(tarotForm);
     notif.innerHTML = '<p>' + result + '</p>';
 };
 
-const getReading = document.getElementById('submit-button');
-getReading.onclick = conductReading;
+conductReading();

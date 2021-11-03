@@ -20,10 +20,10 @@
             <h2 id="instruction">Find out your truth.</h2>
             <div id="result"></div>
             </div>
-            <form id="reading">
+            <form id="reading" action="./result.html" method="GET">
                 <label for="user-name">Your Name:</label><br>
                 <input type="text" name="user-name"><br>
-            <label class="type-instruct">What kind of Tarot reading are you looking for?
+            <p class="type-instruct">What kind of Tarot reading are you looking for?</p>
                 <label class="container" for="ppf">
                     <input type="radio" name="reading-type" value="ppf">
                     Past, Present, Future
@@ -45,7 +45,7 @@
                     Guidance
                 </label><br>
             </label>
-                <input type="button" id="submit-button" value="Tell me">
+                <input type="submit" id="submit-button" value="Tell me">
             </form>
         </div>
         <div class="spacer"></div>
@@ -54,6 +54,5 @@
         </footer>
         <div class="spacer"></div>
     </div>
-    <script src="./tarot.js"></script>
 </body>
 </html>

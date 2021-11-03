@@ -31,7 +31,7 @@ body {
 
 header {
     margin: auto;
-    width: 40%;
+    width: 50%;
     padding: 50px;
 }
 
@@ -100,7 +100,7 @@ footer {
     margin: 20px;
 }
 
-input[type=button] {
+input[type=submit] {
     font-family: 'Cinzel Decorative', serif;
     background-color:rgb(57, 41, 113);
     border-radius: 20px;
@@ -112,7 +112,7 @@ input[type=button] {
     letter-spacing: .2rem; 
 }
 
-input[type=button]:hover {
+input[type=submit]:hover {
     background-color: var(--palette-aqua);
     transition: background-color linear 0.75s;
 }
@@ -179,4 +179,21 @@ input[type="radio"]:checked::before {
     font-size: 1.8rem;
     line-height: 3rem;
     color: var(--palette-aqua);
+}
+
+button {
+    font-family: 'Cinzel Decorative', serif;
+    background-color: var(--palette-yellow);
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--palette-purple);
+    border: 0px;
+    margin: 20px;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+}
+
+button:hover {
+    background-color: var(--palette-aqua);
+    transition: background-color linear 0.75s;
 }
