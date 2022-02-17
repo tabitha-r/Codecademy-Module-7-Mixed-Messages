@@ -346,8 +346,8 @@ if (!userName) {
             result = guidanceReading(firstCard, secondCard, thirdCard, userName);
             break;
     };
-    instruction.innerHTML = '<p>The cards have spoken.</p>'
-    notif.innerHTML = '<p>' + result + '</p>';
+    instruction.textContent = 'The cards have spoken.';
+    notif.textContent = result;
 };
 
 conductReading();
